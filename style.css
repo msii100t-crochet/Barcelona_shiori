@@ -1,0 +1,112 @@
+:root {
+  --mint: #9ad9c7;
+  --pink: #f2a1b3;
+  --bg: #fafafa;
+  --text: #333;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  height: 40vh;
+  background: url("https://images.unsplash.com/photo-1505731132164-cca903a5f91b") center/cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav a {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--mint);
+  font-weight: bold;
+}
+
+main {
+  padding: 16px;
+  padding-bottom: 70px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: var(--mint);
+}
+
+h3 {
+  color: var(--pink);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #eee;
+  padding: 6px;
+  text-align: left;
+}
+
+.money-input {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.money-input input {
+  flex: 1;
+}
+
+.money-input button {
+  background: var(--mint);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.checklist li {
+  list-style: none;
+}
