@@ -85,8 +85,17 @@ th, td {
 
 .money-input {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
-  margin-top: 10px;
+}
+
+.money-input input {
+  flex: 1 1 30%;
+  min-width: 0;
+}
+
+.money-input button {
+  flex: 1 1 100%;
 }
 
 .money-input input {
