@@ -5,6 +5,10 @@
   --text: #333;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
@@ -12,16 +16,18 @@ body {
   color: var(--text);
 }
 
+/* ===== HERO ===== */
 .hero {
   height: 40vh;
-  background: url("https://images.unsplash.com/photo-1593368858664-a7fe556ab936?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=d-jonez-qiH16d5SRxg-unsplash.jpg&w=1600") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1593368858664-a7fe556ab936?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=d-jonez-qiH16d5SRxg-unsplash.jpg&w=1600")
+    center / cover no-repeat;
   position: relative;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +39,7 @@ body {
   margin: 0;
 }
 
+/* ===== NAV ===== */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -40,6 +47,7 @@ body {
   display: flex;
   background: white;
   border-top: 1px solid #ddd;
+  z-index: 10;
 }
 
 .bottom-nav a {
@@ -51,9 +59,10 @@ body {
   font-weight: bold;
 }
 
+/* ===== LAYOUT ===== */
 main {
   padding: 16px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 .card {
@@ -61,7 +70,7 @@ main {
   border-radius: 16px;
   padding: 16px;
   margin-bottom: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
@@ -72,42 +81,44 @@ h3 {
   color: var(--pink);
 }
 
+/* ===== TABLE ===== */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border-bottom: 1px solid #eee;
   padding: 6px;
   text-align: left;
 }
 
+/* ===== MONEY INPUT（横並び・はみ出さない） ===== */
 .money-input {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.money-input input {
-  flex: 1 1 30%;
-  min-width: 0;
-}
-
-.money-input button {
-  flex: 1 1 100%;
+  gap: 8px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .money-input input {
   flex: 1;
+  min-width: 0; /* ← これが超重要 */
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
 .money-input button {
+  flex-shrink: 0;
   background: var(--mint);
   border: none;
   color: white;
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .total {
@@ -116,6 +127,7 @@ th, td {
   margin-top: 8px;
 }
 
+/* ===== CHECKLIST ===== */
 .checklist li {
   list-style: none;
 }
